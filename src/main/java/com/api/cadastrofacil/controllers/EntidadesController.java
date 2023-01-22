@@ -53,7 +53,7 @@ public class EntidadesController {
 	public ResponseEntity<Object> getOneEntidade(@PathVariable(value = "id") UUID id) {
 		Optional<EntidadesModel> entidadesModelOptional = entidadesService.findById(id);
 		if (!entidadesModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada!");
 		}		
 		return ResponseEntity.status(HttpStatus.OK).body(entidadesModelOptional.get());
 	}
@@ -62,7 +62,7 @@ public class EntidadesController {
 	public ResponseEntity<Object> deleteOneEntidade(@PathVariable(value = "id") UUID id) {
 		Optional<EntidadesModel> entidadesModelOptional = entidadesService.findById(id);
 		if (!entidadesModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada!");
 		}		
 		entidadesService.delete(entidadesModelOptional.get());
 		return ResponseEntity.status(HttpStatus.OK).body("Deletado com sucesso!");
@@ -72,7 +72,7 @@ public class EntidadesController {
 	public ResponseEntity<Object> updateEntidade(@PathVariable(value = "id") UUID id, @RequestBody @Valid EntidadesDto entidadesDto) {
 		Optional<EntidadesModel> entidadesModelOptional = entidadesService.findById(id);
 		if (!entidadesModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada");
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Entidade não encontrada!");
 		}		
 		EntidadesModel entidadesModel = new EntidadesModel();
 		BeanUtils.copyProperties(entidadesDto, entidadesModel);
