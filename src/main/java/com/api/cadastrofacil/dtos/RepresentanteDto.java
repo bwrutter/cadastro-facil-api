@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class EntidadesDto {
+public class RepresentanteDto {
 	
     private String nome;
     private String cpfcnpj;

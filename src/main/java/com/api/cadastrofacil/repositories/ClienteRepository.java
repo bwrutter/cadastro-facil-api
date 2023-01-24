@@ -4,9 +4,9 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.api.cadastrofacil.models.EntidadesModel;
+import com.api.cadastrofacil.models.ClienteModel;
 
 
-public interface EntidadesRepository extends JpaRepository<EntidadesModel, UUID>{
+public interface ClienteRepository extends JpaRepository<ClienteModel, UUID>{
 
 }

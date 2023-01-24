@@ -14,10 +14,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tb_entidade")
+@Table(name = "tb_cliente")
 @Getter
 @Setter
-public class EntidadesModel implements Serializable {
+public class ClienteModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
